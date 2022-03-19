@@ -45,3 +45,7 @@ K8s cluster on AWS using Terraform
 - To verify the nodegroup check the AWS EKS cluster console and look under nodes.
 - To verify the ingress controller run `kubectl get ingress`
 - To verify the application is successfully running take the URL from the `kubectl get ingress` and go to it using a browser
+
+## TL;DR
+Here is a video of the config in action
+[![Demo Video](https://img.youtube.com/vi/STqYDRF6dw4/0.jpg)](https://www.youtube.com/watch?v=STqYDRF6dw4)

@@ -47,5 +47,5 @@ K8s cluster on AWS using Terraform
 - To verify the application is successfully running take the URL from the `kubectl get ingress` and go to it using a browser
 
 ## TL;DR
-Here is a video of the config in action
+Here is a video of the config in action </br>
 [![Demo Video](https://img.youtube.com/vi/STqYDRF6dw4/0.jpg)](https://www.youtube.com/watch?v=STqYDRF6dw4)

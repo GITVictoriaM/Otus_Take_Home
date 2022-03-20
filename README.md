@@ -1,6 +1,10 @@
 # Welcome Otus Team!
 ![This is an image](https://gitpublicimages.s3.us-east-2.amazonaws.com/main-otus-logo-small.png)
 
+## TL;DR
+Here is a video of the config in action </br>
+[![Demo Video](https://img.youtube.com/vi/9k6We8AeXYU/0.jpg)](https://www.youtube.com/watch?v=9k6We8AeXYU)
+
 ## Dependencies
 
 In order to run the following configuration you will need to have the following installed to their latest versions:
@@ -46,6 +50,4 @@ K8s cluster on AWS using Terraform
 - To verify the ingress controller run `kubectl get ingress`
 - To verify the application is successfully running take the URL from the `kubectl get ingress` and go to it using a browser
 
-## TL;DR
-Here is a video of the config in action </br>
-[![Demo Video](https://img.youtube.com/vi/STqYDRF6dw4/0.jpg)](https://www.youtube.com/watch?v=STqYDRF6dw4)
+

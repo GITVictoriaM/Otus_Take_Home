@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: otus-demo
+  labels:
+    app: otus-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: otus-demo
+  template:
+    metadata:
+      labels:
+        app: otus-demo
+    spec:
+      containers:
+      - name: otus-demo
+        image: 32mvictoria/otus_demo_app:v1.0
+        ports:
+        - containerPort: 80
+        resources:
+         limits:
+           cpu: 100m
+         requests:
+           cpu: 50m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: otus-demo
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: otus-demo
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: otus-demo
+  annotations:
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: otus-demo
+            port:
+              number: 80
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: otus-demo
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: otus-demo
+  minReplicas: 3
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50

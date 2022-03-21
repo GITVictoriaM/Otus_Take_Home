@@ -1,3 +1,4 @@
+![Future Otus Employee](https://img.shields.io/badge/Otus-Your%20Next%20Engineer-brightgreen)
 # Welcome Otus Team!
 ![This is an image](https://gitpublicimages.s3.us-east-2.amazonaws.com/main-otus-logo-small.png)
 
